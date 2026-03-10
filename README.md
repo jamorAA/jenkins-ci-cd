@@ -35,4 +35,10 @@ http://158.160.227.106:8080/
 ---
 
 ## 📸 Screenshots
+![version increment1](screenshots/1.png)
+![version increment2](screenshots/2.png)
+![version increment3](screenshots/3.png)
+![version increment4](screenshots/4.png)
 
+Commit loop prevention
+![prevention](screenshots/5.png)
