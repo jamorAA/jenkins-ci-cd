@@ -16,7 +16,7 @@ Dynamically Increment Application version in Jenkins Pipeline
 ---
 
 ## 📖 Project Description
-- Configure CI step:Increment patch version
+- Configure CI step: Increment patch version
 - Configure CI step: Build Java application and clean old artifacts
 - Configure CI step: Build Image with dynamic Docker Image Tag
 - Configure CI step: Push Image to private DockerHub repository

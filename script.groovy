@@ -23,4 +23,21 @@ def buildImage() {
 def deployApp() {
     echo "deploying the application..."
 }
+
+def gitPush() {
+    echo "pushing version change to github repository..."
+    withCredentials([string(credentialsId: 'github-token', variable: 'TOKEN')]) {
+        sh "git config --global user.email 'jenkins@example.com'"
+        sh "git config --global user.name 'jenkins'"
+
+        sh "git status"
+        sh "git branch"
+        sh "git config --list"
+
+        sh "git remote set-url origin https://${TOKEN}@github.com/jamorAA/jenkins-practice.git"
+        sh "git add pom.xml"
+        sh "git commit -m 'ci: version bump'"
+        sh "git push origin HEAD:main"
+    }
+}
 return this

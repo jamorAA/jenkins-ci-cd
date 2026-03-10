@@ -41,5 +41,12 @@ pipeline {
                 }
             }
         }
+        stage("git push") {
+            steps {
+                script {
+                    gv.gitPush()
+                }
+            }
+        }
     }
 }
