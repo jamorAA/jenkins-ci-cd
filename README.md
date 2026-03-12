@@ -30,9 +30,15 @@ The Jenkins server is deployed using Yandex Cloud:
 
 http://158.160.227.106:8080/
 
-> ⚠️ Note: The address may be temporarily unavailable if the cloud server is inactive (for example, if the hosting service has not been paid).
+The application can be accessed on this address:
+
+http://158.160.226.219:8080/
+
+> ⚠️ Note: The addresses may be temporarily unavailable if the cloud server is inactive (for example, if the hosting service has not been paid).
 
 ---
 
 ## 📸 Screenshots
-![1](screenshots/1.png)
+![cd part 1](screenshots/1.png)
+![cd part 2](screenshots/2.png)
+![cd part 3](screenshots/3.png)
