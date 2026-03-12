@@ -15,10 +15,11 @@ def buildImage() {
 def deployApp() {
     echo "deploying the application..."
     sshagent(['ssh-key']) {
-        def script = "bash ./server-commands.sh"
-        sh "scp server-commands.sh morant@158.160.226.219:/home/morant/"
-        sh "scp docker-compose.yaml morant@158.160.226.219:/home/morant/"
-        sh "ssh -o StrictHostKeyChecking=no morant@158.160.226.219 $script"
+        def script = "bash ./server-commands.sh $IMAGE_NAME"
+        def server = "morant@158.160.226.219"
+        sh "scp server-commands.sh ${server}:/home/morant/"
+        sh "scp docker-compose.yaml ${server}:/home/morant/"
+        sh "ssh -o StrictHostKeyChecking=no $server $script"
     }
 }
 return this
