@@ -1,7 +1,7 @@
 # Demo Project
 
 ## 📌 Overview
-CD - Deploy Application from Jenkins Pipeline on Compute Cloud(Yandex Cloud Service) Instance (automatically with docker-compose)
+Complete the CI/CD Pipeline (Docker-Compose, Dynamic versioning)
 
 ---
 
@@ -18,10 +18,11 @@ CD - Deploy Application from Jenkins Pipeline on Compute Cloud(Yandex Cloud Serv
 ---
 
 ## 📖 Project Description
-- Install Docker Compose on Yandex Cloud Compute Cloud Instance
-- Create docker-compose.yml file that deploys our web application image
-- Configure Jenkins pipeline to deploy newly built image using Docker Compose on Yandex Cloud Compute Cloud server
-- Improvement: Extract multiple Linux commands that are executed on remote server into a separate shell script and execute the script from Jenkinsfile
+- CI step: Increment version
+- CI step: Build artifact for Java Maven application
+- CI step: Build and push Docker image to Docker Hub
+- CD step: Deploy new application version with Docker Compose
+- CD step: Commit the version update
 
 ---
 
@@ -40,6 +41,3 @@ http://158.160.226.219:8080/
 
 ## 📸 Screenshots
 ![cd part 1](screenshots/1.png)
-![cd part 2](screenshots/2.png)
-![cd part 3](screenshots/3.png)
-![cd part 4](screenshots/4.png)
