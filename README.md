@@ -1,7 +1,7 @@
 # Demo Project
 
 ## 📌 Overview
-CD - Deploy Application from Jenkins Pipeline to Compute Cloud Instance (automatically with docker)
+CD - Deploy Application from Jenkins Pipeline on Compute Cloud(Yandex Cloud Service) Instance (automatically with docker-compose)
 
 ---
 
@@ -18,10 +18,10 @@ CD - Deploy Application from Jenkins Pipeline to Compute Cloud Instance (automat
 ---
 
 ## 📖 Project Description
-- Prepare Yandex Cloud Compute Cloud Instance for deployment (Install Docker)
-- Create ssh key credentials for cloud machine server on Jenkins
-- Extend the previous CI pipeline with deploy step to ssh into the remote Compute Cloud instance and deploy newly built image from Jenkins server
-- Configure security group on Compute Cloud Instance to allow access to our web application
+- Install Docker Compose on Yandex Cloud Compute Cloud Instance
+- Create docker-compose.yml file that deploys our web application image
+- Configure Jenkins pipeline to deploy newly built image using Docker Compose on Yandex Cloud Compute Cloud server
+- Improvement: Extract multiple Linux commands that are executed on remote server into a separate shell script and execute the script from Jenkinsfile
 
 ---
 
@@ -40,5 +40,3 @@ http://158.160.226.219:8080/
 
 ## 📸 Screenshots
 ![cd part 1](screenshots/1.png)
-![cd part 2](screenshots/2.png)
-![cd part 3](screenshots/3.png)

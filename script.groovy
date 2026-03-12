@@ -15,8 +15,9 @@ def buildImage() {
 def deployApp() {
     echo "deploying the application..."
     sshagent(['ssh-key']) {
-        def dockerCmd = "docker run -d -p 8080:8080 --name java-maven-app $IMAGE_NAME"
-        sh "ssh -o StrictHostKeyChecking=no morant@158.160.226.219 $dockerCmd"
+        def dockerComposeCmd = "docker-compose -f docker-compose.yaml up --detach"
+        sh "scp docker-compose.yaml morant@158.160.226.219:/home/morant/"
+        sh "ssh -o StrictHostKeyChecking=no morant@158.160.226.219 $dockerComposeCmd"
     }
 }
 return this
