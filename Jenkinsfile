@@ -5,14 +5,18 @@ pipeline {
     tools {
         maven 'maven-3.9'
     }
-    environment {
-        IMAGE_NAME = 'jamoraa/demo-java-maven-app:1.1.0'
-    }
     stages {
         stage("init") {
             steps {
                 script {
                     gv = load 'script.groovy'
+                }
+            }
+        }
+        stage("increment version") {
+            steps {
+                script {
+                    gv.increment()
                 }
             }
         }
@@ -23,7 +27,7 @@ pipeline {
                 }
             }
         }
-        stage("build image") {
+        stage("build and push image") {
             steps {
                 script {
                     gv.buildImage()
@@ -34,6 +38,13 @@ pipeline {
             steps {
                 script {
                     gv.deployApp()
+                }
+            }
+        }
+        stage("git push") {
+            steps {
+                script {
+                    gv.gitPush()
                 }
             }
         }
