@@ -41,3 +41,5 @@ http://158.160.226.219:8080/
 
 ## 📸 Screenshots
 ![cd part 1](screenshots/1.png)
+![cd part 2](screenshots/2.png)
+![cd part 3](screenshots/3.png)
